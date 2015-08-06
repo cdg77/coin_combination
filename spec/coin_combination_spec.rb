@@ -18,5 +18,3 @@ describe('Fixnum#coin_combination') do
     expect((41).coin_combination()).to(eq("1 pennies, 1 nickles, 1 dimes, 1 quarters"))
   end
 end
-
-# 0 nickles, 0 dimes, 0 quarters
