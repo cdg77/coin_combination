@@ -3,28 +3,17 @@ class Fixnum
     given_amount = self
     counter = 0
 
-    # until counter.== (4)
-    #     pennies = counter.+(1)
-    # end
+    dimes = given_amount./(10)
+    after_dimes = given_amount%10
+    nickles = after_dimes./(5)
+    after_nickles = after_dimes%5
 
-    # not_pennies = given_amount - pennies
-    #
-    # nickles = not_pennies./(5)
-    #
-
-    # until counter.==(given_amount % 5 == 0)
-    #   counter = counter.+(1)
-    #   nickles = counter
-    # end
-
-    nickles = given_amount./(5)
-    after_nickles = given_amount%5
-
-    until counter.==(after_nickles)
+    until counter.== (after_nickles)
         counter = counter.+(1)
         pennies = counter
     end
-    answer = pennies.to_s + " pennies" + ", " + nickles.to_s + " nickles"
+
+    answer = pennies.to_s + " pennies, " + nickles.to_s + " nickles, " + dimes.to_s + " dimes"
     answer
   end
 end
