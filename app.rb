@@ -9,6 +9,6 @@ get('/') do
 end
 
 get('/coin_combination') do
-  @coin_combination = params.fetch('coin_combination').coin_combination()
+  @coin_combination = params.fetch('coins').to_i().coin_combination()
   erb(:coin_combination)
 end
